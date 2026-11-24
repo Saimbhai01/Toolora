@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Toolora offers free, fast, and easy online tools for text, developers, SEO, and everyday calculations. No sign-up required.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#6558e8">
+  <title>Toolora — Free Online Tools for Everyone</title>
+  <link rel="canonical" href="https://your-project.pages.dev/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="header">
+      <a class="brand" href="#home" aria-label="Toolora home"><span class="brand-icon">✦</span><span>toolora</span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="#tools">All tools</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
+      <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">☾</button><a class="header-cta" href="#tools">Explore tools <span>↗</span></a></div>
+      <button class="menu-btn" id="menuToggle" aria-label="Open navigation">☰</button>
+    </header>
+
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-badge"><span class="pulse"></span> YOUR EVERYDAY DIGITAL TOOLKIT</div>
+        <h1>Small tools.<br><span>Big possibilities.</span></h1>
+        <p class="hero-copy">Useful online tools that make everyday tasks easier.<br class="desktop-only"> Simple, fast, and free to use.</p>
+        <form class="search-wrap" id="searchForm" role="search"><span class="search-icon">⌕</span><input id="toolSearch" type="search" placeholder="Search for a tool… (e.g. word counter)" autocomplete="off" aria-label="Search tools"><kbd>⌘ K</kbd></form>
+        <div class="hero-note"><span>✧</span> No sign-up needed <span class="dot-sep">·</span> Free to use <span class="dot-sep">·</span> Privacy-friendly</div>
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="floating-card fc-one"><span class="fc-icon purple">Aa</span><div><b>Text tools</b><small>Write & refine</small></div></div><div class="floating-card fc-two"><span class="fc-icon mint">⌘</span><div><b>Smart utilities</b><small>Work more efficiently</small></div></div><div class="hero-spark spark-a">✦</div><div class="hero-spark spark-b">✧</div><div class="hero-center"><div class="center-glyph">✳</div></div></div>
+      </section>
+
+      <section class="tools-section" id="tools">
+        <div class="section-top"><div><span class="eyebrow">THE TOOLBOX</span><h2>Find the right tool</h2><p>Explore our growing collection of handy utilities.</p></div><span class="tool-count" id="toolCount">6 tools</span></div>
+        <div class="category-row" id="categories" aria-label="Tool categories"><button class="category active" data-category="all">All tools</button><button class="category" data-category="text">Text</button><button class="category" data-category="developer">Developer</button><button class="category" data-category="seo">SEO</button><button class="category" data-category="calculators">Calculators</button></div>
+        <div class="tool-grid" id="toolGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><div class="empty-icon">⌕</div><h3>No tools found</h3><p>Try a different search or category.</p><button class="reset-btn" id="resetSearch">Clear search</button></div>
+      </section>
+      <section class="value-section" id="about"><div class="value-head"><span class="eyebrow">MADE TO BE USEFUL</span><h2>Less hassle.<br>More getting done.</h2><p>Toolora brings practical utilities together in one clean place, helping you get through everyday tasks without the clutter.</p></div><div class="value-grid"><article class="value-card"><div class="value-icon icon-lavender">✧</div><h3>Easy by design</h3><p>Simple interfaces that make tools easy to understand and use.</p></article><article class="value-card"><div class="value-icon icon-mint">⚡</div><h3>Quick results</h3><p>Get things done in moments, with tools that work right in your browser.</p></article><article class="value-card"><div class="value-icon icon-peach">◇</div><h3>Privacy mindful</h3><p>Where possible, your work stays locally in your browser instead of being sent to a server.</p></article></div></section>
+      <section class="cta"><div><span class="eyebrow">A BETTER WAY TO GET IT DONE</span><h2>Your next task, made simpler.</h2><p>Explore the tools and find a little shortcut for your day.</p></div><a href="#tools" class="cta-link">Browse all tools <span>↗</span></a><div class="cta-decoration">✳</div></section>
+    </main>
+    <footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-icon">✦</span><span>toolora</span></a><p>Simple, smart, useful tools for everyday life.</p><div class="footer-links"><a href="#about">About</a><a href="#tools">Tools</a><a href="mailto:hello@example.com">Contact</a><a href="#">Privacy</a><a href="#">Terms</a></div><div class="copyright">© <span id="year"></span> Toolora. All rights reserved.</div></footer>
+  </div>
+  <div class="modal-backdrop" id="toolModal" hidden><section class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="modal-label" id="modalCategory">TOOL</div><h2 id="modalTitle">Tool name</h2></div><button class="icon-btn close-modal" id="closeModal" aria-label="Close tool">×</button></div><div class="modal-body" id="modalBody"></div><div class="modal-foot"><span class="privacy-note">✦ Runs in your browser</span><button class="reset-btn" id="clearTool">Clear</button></div></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
